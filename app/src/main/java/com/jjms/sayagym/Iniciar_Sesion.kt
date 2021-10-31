@@ -10,7 +10,7 @@ class Iniciar_Sesion : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_iniciar_sesion)
 
-        val atras=findViewById<Button>(R.id.atras)
+        val atras=findViewById<Button>(R.id.BtnAtras)
         atras.setOnClickListener {
             val lanzar = Intent(this,MainActivity::class.java)
             startActivity(lanzar)

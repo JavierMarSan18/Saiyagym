@@ -8,7 +8,7 @@
     tools:context=".Iniciar_Sesion">
 
     <Button
-        android:id="@+id/atras"
+        android:id="@+id/BtnAtras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_2"

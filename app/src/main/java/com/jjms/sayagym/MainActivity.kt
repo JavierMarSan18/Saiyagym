@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val sesion = findViewById<Button>(R.id.sesion)
+        val sesion = findViewById<Button>(R.id.btnISesion)
 
         sesion.setOnClickListener {
             val lanzar = Intent(this,Iniciar_Sesion::class.java)
