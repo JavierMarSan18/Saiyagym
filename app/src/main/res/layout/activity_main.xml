@@ -46,7 +46,7 @@
         android:contentDescription="@string/todo" />
 
     <Button
-        android:id="@+id/sesion"
+        android:id="@+id/btnISesion"
         android:layout_width="156dp"
         android:layout_height="68dp"
         android:backgroundTint="@color/dorado"
