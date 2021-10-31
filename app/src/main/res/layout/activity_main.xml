@@ -51,7 +51,7 @@
         android:layout_height="68dp"
         android:backgroundTint="@color/dorado"
         android:text="@string/pantalla1"
-        android:textColor="#33691E"
+        android:textColor="#FF5722"
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

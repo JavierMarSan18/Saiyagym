@@ -1,20 +1,20 @@
-    package com.jjms.sayagym
+package com.jjms.sayagym
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-    class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val sesion=findViewById<Button>(R.id.atras)
+        val sesion = findViewById<Button>(R.id.sesion)
+
         sesion.setOnClickListener {
             val lanzar = Intent(this,Iniciar_Sesion::class.java)
             startActivity(lanzar)
         }
-
     }
 }
