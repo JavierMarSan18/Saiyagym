@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val sesion = findViewById<Button>(R.id.btnISesion)
 
+        //Lanzar activity de inicio de sesión
         sesion.setOnClickListener {
             val lanzar = Intent(this,Iniciar_Sesion::class.java)
             startActivity(lanzar)
