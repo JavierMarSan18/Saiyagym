@@ -15,6 +15,19 @@ class MainActivity : AppCompatActivity() {
         sesion.setOnClickListener {
             val lanzar = Intent(this,Iniciar_Sesion::class.java)
             startActivity(lanzar)
+
+
+        }
+
+        val registro = findViewById<Button>(R.id.registro)
+
+        registro.setOnClickListener {
+            val lanzar = Intent(this,registrarse::class.java)
+            startActivity(lanzar)
+
+
+        }
+
+
         }
     }
-}
