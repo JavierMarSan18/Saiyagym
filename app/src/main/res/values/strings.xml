@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Sayagym</string>
+    <string name="pantallaUno">Registrarse</string>
     <string name="pantalla1">Iniciar Sesion</string>
     <string name="pantalla_1">Registrarse</string>
     <string name="btn_1">Atras</string>
     <string name="btn_2">Atras</string>
     <string name="todo">TODO</string>
     <string name="todo2">TODO</string>
+    <string name="btn_1p2">Atras</string>
+    <string name="btn_2p2">Atras</string>
 
 </resources>
