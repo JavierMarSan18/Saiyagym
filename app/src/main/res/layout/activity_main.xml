@@ -36,14 +36,14 @@
         android:id="@+id/imageView2"
         android:layout_width="285dp"
         android:layout_height="184dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintHorizontal_bias="0.682"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/kintoun"
-        tools:ignore="ImageContrastCheck"
-        android:contentDescription="@string/todo" />
+        tools:ignore="ImageContrastCheck" />
 
     <Button
         android:id="@+id/btnISesion"
