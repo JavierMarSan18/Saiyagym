@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sayagym">
         <activity
+            android:name=".registrarse"
+            android:exported="false" />
+        <activity
             android:name=".Iniciar_Sesion"
             android:exported="false" />
         <activity
