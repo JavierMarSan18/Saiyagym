@@ -9,5 +9,6 @@
     <string name="todo2">TODO</string>
     <string name="btn_1p2">Atras</string>
     <string name="btn_2p2">Atras</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>

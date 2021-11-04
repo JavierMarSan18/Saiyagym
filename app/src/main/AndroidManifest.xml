@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.jjms.sayagym">
 
     <application
@@ -10,8 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sayagym">
         <activity
-            android:name=".registrarse"
-            android:exported="false" />
+            android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".Iniciar_Sesion"
             android:exported="false" />

@@ -14,21 +14,15 @@ class MainActivity : AppCompatActivity() {
 
         //Lanzar activity de inicio de sesión
         sesion.setOnClickListener {
-            val lanzar = Intent(this,Iniciar_Sesion::class.java)
-            startActivity(lanzar)
-
-
+            val createActivity = Intent(this,Iniciar_Sesion::class.java)
+            startActivity(createActivity)
         }
 
         val registro = findViewById<Button>(R.id.registro)
 
         registro.setOnClickListener {
-            val lanzar = Intent(this,registrarse::class.java)
+            val lanzar = Intent(this, RegisterActivity::class.java)
             startActivity(lanzar)
-
-
-        }
-
-
         }
     }
+}
