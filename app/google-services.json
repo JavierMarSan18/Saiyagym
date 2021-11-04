@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "347421347499",
+    "firebase_url": "https://login-saiyagym-default-rtdb.firebaseio.com",
+    "project_id": "login-saiyagym",
+    "storage_bucket": "login-saiyagym.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347421347499:android:02c759639f39e7562971ee",
+        "android_client_info": {
+          "package_name": "com.jjms.sayagym"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347421347499-582auj4rr8p2edh3gsg32npueijo8a28.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jjms.sayagym",
+            "certificate_hash": "4895ea23bd92a38b9f1169940bf3466dddf1cd75"
+          }
+        },
+        {
+          "client_id": "347421347499-9hidq29pov06npo4bt3eiikcknaor30c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBNLYfPs1Hzaytjwau_vybnZulG3MGdDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347421347499-9hidq29pov06npo4bt3eiikcknaor30c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
