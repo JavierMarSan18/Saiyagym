@@ -11,17 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sayagym">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="false"
-            tools:ignore="DuplicateActivity" />
+            android:exported="true" />
         <activity
-            android:name=".Iniciar_Sesion"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
