@@ -30,4 +30,6 @@
     <string name="menu_coaching">Coaching</string>
     <string name="menu_nutrition">Nutrición</string>
 
+    <string name="prefs_file">com.jjms.sayagym.PREFERENCE_FILE_KEY</string>
+
 </resources>
