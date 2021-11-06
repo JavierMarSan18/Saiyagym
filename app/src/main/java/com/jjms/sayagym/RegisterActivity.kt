@@ -1,22 +1,22 @@
 package com.jjms.sayagym
 
 import android.content.Intent
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
+
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var txtName : EditText
-    private lateinit var txtAge : EditText
     private lateinit var txtEmail : EditText
     private lateinit var txtPassword : EditText
+    private lateinit var trainer : String
     private lateinit var auth : FirebaseAuth
     private lateinit var database : FirebaseDatabase
     private lateinit var dbReference : DatabaseReference
@@ -25,8 +25,6 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        txtName = findViewById(R.id.txtName)
-        txtAge = findViewById(R.id.txtAge)
         txtEmail = findViewById(R.id.txtEmail)
         txtPassword = findViewById(R.id.txtPassword)
 
@@ -34,6 +32,7 @@ class RegisterActivity : AppCompatActivity() {
         dbReference = database.reference.child("User")
 
         auth = FirebaseAuth.getInstance()
+
     }
 
     fun onClickRegister(view: android.view.View) {
@@ -41,12 +40,10 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun createNewAccount(){
-        val name = txtName.text.toString()
-        val age = txtAge.text.toString()
         val email = txtEmail.text.toString()
         val password = txtPassword.text.toString()
 
-        if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(age) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
+        if(!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(trainer)){
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this){
                     task ->
@@ -54,10 +51,8 @@ class RegisterActivity : AppCompatActivity() {
                         val user : FirebaseUser? = auth.currentUser
                         verifyEmail(user)
 
-                        val userDB = user?.uid?.let { dbReference.child(it) }
-
-                        userDB?.child("Name")?.setValue(name)
-                        userDB?.child("Age")?.setValue(age)
+                        val userBD = user?.uid?.let { dbReference.child(it) }
+                        userBD?.child("Trainer")?.setValue(trainer)
 
                         action()
                     }
@@ -82,5 +77,18 @@ class RegisterActivity : AppCompatActivity() {
     private fun action(){
         val createActivity = Intent(this, LoginActivity::class.java)
         startActivity(createActivity)
+    }
+
+    fun onClickTAzu(view: android.view.View) {
+        trainer = "Azucena"
+        Toast.makeText(this, "Entrenador Seleccionado", Toast.LENGTH_SHORT).show()
+    }
+    fun onClickTOsman(view: android.view.View) {
+        trainer = "Osman"
+        Toast.makeText(this, "Entrenador Seleccionado", Toast.LENGTH_SHORT).show()
+    }
+    fun onClickTJavier(view: android.view.View) {
+        trainer = "Javier"
+        Toast.makeText(this, "Entrenador Seleccionado", Toast.LENGTH_SHORT).show()
     }
 }
