@@ -22,7 +22,6 @@ class LoginActivity : AppCompatActivity() {
         txtPassword = findViewById(R.id.txtPasswordLogin)
 
         auth = FirebaseAuth.getInstance()
-
     }
 
     fun onClickLogin(view: android.view.View) {

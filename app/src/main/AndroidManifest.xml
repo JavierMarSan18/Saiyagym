@@ -11,15 +11,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sayagym">
         <activity
+            android:name=".NutritionActivity"
+            android:label="Nutrición"
+            android:exported="false" />
+        <activity
+            android:name=".CoachingActivity"
+            android:label="Coaching"
+            android:exported="false" />
+        <activity
+            android:name=".PersonalActivity"
+            android:label="Personal"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="false"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Sayagym.NoActionBar" />
+            android:label="Saiyagym"
+            android:exported="false" />
         <activity
             android:name=".RegisterActivity"
+            android:label="Registro"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
+            android:label="Inicio de Sesión"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
