@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var txtName : EditText
+    private lateinit var txtAge : EditText
     private lateinit var txtEmail : EditText
     private lateinit var txtPassword : EditText
     private lateinit var auth : FirebaseAuth
@@ -25,6 +26,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         txtName = findViewById(R.id.txtName)
+        txtAge = findViewById(R.id.txtAge)
         txtEmail = findViewById(R.id.txtEmail)
         txtPassword = findViewById(R.id.txtPassword)
 
@@ -40,10 +42,11 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun createNewAccount(){
         val name = txtName.text.toString()
+        val age = txtAge.text.toString()
         val email = txtEmail.text.toString()
         val password = txtPassword.text.toString()
 
-        if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
+        if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(age) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this){
                     task ->
@@ -54,6 +57,7 @@ class RegisterActivity : AppCompatActivity() {
                         val userDB = user?.uid?.let { dbReference.child(it) }
 
                         userDB?.child("Name")?.setValue(name)
+                        userDB?.child("Age")?.setValue(age)
 
                         action()
                     }
